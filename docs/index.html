@@ -9,17 +9,18 @@
             padding: 0;
             margin: 0;
             box-sizing: border-box;
+            font-family: sans-serif;
         }
         
         input{
-            background-color: red;
-            color: white;
+            background-color: white;
+            color: red;
             outline: none;
         }
         
         input:focus{
-            background-color: #be0000;
-            color: white;
+            background-color: #fff1f1;
+            color: red;
         }
         
         input:-internal-autofill-selected {
@@ -36,41 +37,44 @@
            <form action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSe7JUeOtVhaFme80_JJF47W06P4aTAxPdjQjQJWFLliS5691g/formResponse" method="post">
            
                 <!--Mail-->
-                <label for="mail" style="display: block; margin: 0 0 1em 0;">
-                    <span style="display: block;">Mail</span>
-                    <input type="email" id="mail" name="entry.1125016628" style="width: 100%; display: block; flex: 1; background-color: red; border: none; border-bottom: solid 1px white;">
+                <label for="mail1" style="display: block; margin: 0 0 1.5em 0;">
+                    <span style="display: block; margin-bottom: .5em; font-weight: 600;">Mail</span>
+                    <input type="email" id="mail1" placeholder="Tu mail" name="entry.1125016628" style="width: 100%; display: block; flex: 1; border: none; border-bottom: solid 1px white; padding: 1em; font-size: 1.2em; letter-spacing: .05em;" required>
                 </label>
 
                 <!--Nombre-->
-                <label for="nombre" style="display: block; margin: 0 0 1em 0;">
-                    <span style="display: block;">Nombre</span>
-                    <input type="text" id="nombre" jsname="YPqjbf" placeholder="Tu nombre" name="entry.1130556941" style="width: 100%; display: block; flex: 1; background-color: red; border: none; border-bottom: solid 1px white;">
+                <label for="nombre" style="display: block; margin: 0 0 1.5em 0;">
+                    <span style="display: block; margin-bottom: .5em; font-weight: 600;">Nombre</span>
+                    <input type="text" id="nombre" jsname="YPqjbf" placeholder="Tu nombre" name="entry.1130556941" style="width: 100%; display: block; flex: 1; border: none; border-bottom: solid 1px white; padding: 1em; font-size: 1.2em; letter-spacing: .05em;" required>
                 </label>
 
                 <!--Mail-->
-                <label for="mail" style="display: block; margin: 0 0 1em 0;">
-                    <span style="display: block;">Mail</span>
-                    <input type="email" id="mail" name="entry.669452986" style="width: 100%; display: block; flex: 1; background-color: red; border: none; border-bottom: solid 1px white;">
+                <label for="mail" style="display: block; margin: 0 0 1.5em 0;">
+                    <span style="display: block; margin-bottom: .5em; font-weight: 600;">Mail</span>
+                    <input type="email" placeholder="Tu otro mail" id="mail" name="entry.669452986" style="width: 100%; display: block; flex: 1; border: none; border-bottom: solid 1px white; padding: 1em; font-size: 1.2em; letter-spacing: .05em;" required>
                 </label>
 
                 <!--Options-->
-                <div class="">
-                    <span>Seleccioná</span>  
-                    <label for="opcion1">
-                        <span>Opción 1</span>
-                        <input type="radio" id="opcion1" name="entry.630756075" value="bvcbvc">
+                <div class="" style="margin: 3em 0 3em 0;">
+                    <span style="margin-bottom: 1em; display: block; font-weight: 600;">Seleccioná</span>  
+                    <label for="opcion1" style="margin-right: 2em">
+                        <span style="font-weight: 600; font-size: 1.1em;">Opción 1</span>
+                        <input type="radio" id="opcion1" name="entry.630756075" value="bvcbvc" required>
                     </label>
                     <label for="opcion2">
-                        <span>Opción 2</span>
-                        <input type="radio" id="opcion2" name="entry.630756075" value="Opción 2">
+                        <span style="font-weight: 600; font-size: 1.1em;">Opción 2</span>
+                        <input type="radio" id="opcion2" name="entry.630756075" value="Opción 2" required>
                     </label>
+                    
 
-                    <!--<div>
+<!--
+                    <div id="otros" style="">
                         <label for="otros">Otros</label>
                         <div>
                             <input type="text" name="entry.630756075.other_option_response" value>
                         </div>
-                    </div>-->
+                    </div>
+-->
                 </div>
 
                 <button type="submit">Enviar</button>
@@ -84,5 +88,17 @@
         </div>
 -->
     </main>
+    
+    <!--<script>
+        function myFunction() {
+            var x = document.getElementByName("entry.630756075");
+            
+            if(!x){
+                document.getElementById("otros").style.setProperty("display", "block");
+            }
+            .innerHTML = x;
+        }
+    </script>-->
+    
 </body>
 </html>
